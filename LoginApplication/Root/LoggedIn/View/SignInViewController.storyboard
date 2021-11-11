@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vzp-aN-jPI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SignInViewController-->
+        <scene sceneID="ckj-AM-iuw">
+            <objects>
+                <viewController title="User Login" id="Vzp-aN-jPI" userLabel="SignInViewController" customClass="SignInViewController" customModule="LoginApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kzR-zH-Qcn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQB-H5-Eq3">
+                                <rect key="frame" x="20" y="76" width="374" height="786"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Ody-n3-qc6">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="222"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pgc-Pu-fKR">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="cR0-Fu-ciQ" customClass="FormView" customModule="OpenWeatherApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="70" id="vpm-cY-2ex"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="24i-Du-Lfl" customClass="FormView" customModule="OpenWeatherApp" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="80" width="374" height="70"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSx-e6-6B4" customClass="SubmitButton" customModule="OpenWeatherApp" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="182" width="374" height="40"/>
+                                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="c0E-P0-bYD"/>
+                                                </constraints>
+                                                <state key="normal" title="submit">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Ody-n3-qc6" firstAttribute="top" secondItem="zQB-H5-Eq3" secondAttribute="top" priority="250" id="Ymu-Fh-IZb"/>
+                                    <constraint firstItem="Ody-n3-qc6" firstAttribute="leading" secondItem="zQB-H5-Eq3" secondAttribute="leading" id="eVJ-4Q-YIm"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ody-n3-qc6" secondAttribute="bottom" priority="250" id="gq9-qB-w7c"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ody-n3-qc6" secondAttribute="trailing" id="uoh-c2-xdb"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J4Y-lZ-Wwj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="J4Y-lZ-Wwj" firstAttribute="bottom" secondItem="zQB-H5-Eq3" secondAttribute="bottom" id="3oB-oK-rvy"/>
+                            <constraint firstItem="J4Y-lZ-Wwj" firstAttribute="trailing" secondItem="zQB-H5-Eq3" secondAttribute="trailing" constant="20" id="PAN-TK-2id"/>
+                            <constraint firstItem="Ody-n3-qc6" firstAttribute="width" secondItem="zQB-H5-Eq3" secondAttribute="width" id="XFf-B2-UpP"/>
+                            <constraint firstItem="zQB-H5-Eq3" firstAttribute="leading" secondItem="J4Y-lZ-Wwj" secondAttribute="leading" constant="20" id="fea-6k-vBc"/>
+                            <constraint firstItem="zQB-H5-Eq3" firstAttribute="top" secondItem="J4Y-lZ-Wwj" secondAttribute="top" constant="32" id="hwI-gB-OOu"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="bottomPadding" destination="3oB-oK-rvy" id="kA5-ei-ErE"/>
+                        <outlet property="passwordFormView" destination="24i-Du-Lfl" id="Gds-pD-FkK"/>
+                        <outlet property="scrollView" destination="zQB-H5-Eq3" id="f0j-qc-vvG"/>
+                        <outlet property="submitButton" destination="nSx-e6-6B4" id="Wsc-OI-OLO"/>
+                        <outlet property="usernameFormView" destination="cR0-Fu-ciQ" id="xlg-dy-SPk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BtC-if-vmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="104.34782608695653" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
